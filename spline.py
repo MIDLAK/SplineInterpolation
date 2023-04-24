@@ -82,7 +82,3 @@ def sweep_method(matrix: list[list[float]], free_coefficients: list[float]) -> l
         x[i] = 1/matrix_copy[i][i]* \
                  (free_coefficients_copy[i]-x[i+1]*matrix_copy[i][i+1])
     return x
-
-
-
-

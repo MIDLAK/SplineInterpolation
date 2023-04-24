@@ -20,7 +20,12 @@ def convert_matrix_to_dots(matrix: list[list[float]]) -> list[Dot]:
     Первая строка: значения x, втора: значения f(x)'''
     dots = []
     for i in range(len(matrix[0])):
-        dots.append(Dot(x=matrix[0][i],
-                        y=matrix[1][i]))
+        if len(matrix) == 2:
+            dots.append(Dot(x=matrix[0][i],
+                            y=matrix[1][i]))
+        elif len(matrix) == 1:
+            dots.append(Dot(x=matrix[0][i],
+                            y=0.0))
+            
     return dots
 
